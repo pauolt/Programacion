@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Arrays/Arrays.iml" filepath="$PROJECT_DIR$/Arrays/Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Arrays/Ex1_1/Ex1_1.iml" filepath="$PROJECT_DIR$/Arrays/Ex1_1/Ex1_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Arrays/Ex1_2/Ex1_2.iml" filepath="$PROJECT_DIR$/Arrays/Ex1_2/Ex1_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Arrays/Ex1_3/Ex1_3.iml" filepath="$PROJECT_DIR$/Arrays/Ex1_3/Ex1_3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Arrays/Ex1_4/Ex1_4.iml" filepath="$PROJECT_DIR$/Arrays/Ex1_4/Ex1_4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Arrays/Ex1_5/Ex1_5.iml" filepath="$PROJECT_DIR$/Arrays/Ex1_5/Ex1_5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Arrays/Ex1_6/Ex1_6.iml" filepath="$PROJECT_DIR$/Arrays/Ex1_6/Ex1_6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Arrays/Ex1_7/Ex1_7.iml" filepath="$PROJECT_DIR$/Arrays/Ex1_7/Ex1_7.iml" />
       <module fileurl="file://$PROJECT_DIR$/Programacion.iml" filepath="$PROJECT_DIR$/Programacion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/untitled/untitled.iml" filepath="$PROJECT_DIR$/untitled/untitled.iml" />
     </modules>
   </component>
 </project>
