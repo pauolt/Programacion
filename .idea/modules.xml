@@ -23,9 +23,11 @@
       <module fileurl="file://$PROJECT_DIR$/Hackerrank/Hackerrank.iml" filepath="$PROJECT_DIR$/Hackerrank/Hackerrank.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hackerrank/MercadilloVinilos/MercadilloVinilos.iml" filepath="$PROJECT_DIR$/Hackerrank/MercadilloVinilos/MercadilloVinilos.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hackerrank/MesclaSequencies/MesclaSequencies.iml" filepath="$PROJECT_DIR$/Hackerrank/MesclaSequencies/MesclaSequencies.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Hackerrank/ParellsImparells/ParellsImparells.iml" filepath="$PROJECT_DIR$/Hackerrank/ParellsImparells/ParellsImparells.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hackerrank/PosicioLletra/PosicioLletra.iml" filepath="$PROJECT_DIR$/Hackerrank/PosicioLletra/PosicioLletra.iml" />
       <module fileurl="file://$PROJECT_DIR$/Programacion.iml" filepath="$PROJECT_DIR$/Programacion.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hackerrank/SequenciesIguals/SequenciesIguals.iml" filepath="$PROJECT_DIR$/Hackerrank/SequenciesIguals/SequenciesIguals.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hackerrank/TecladoRobot/TecladoRobot.iml" filepath="$PROJECT_DIR$/Hackerrank/TecladoRobot/TecladoRobot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hackerrank/posicioAlfabet/posicioAlfabet.iml" filepath="$PROJECT_DIR$/Hackerrank/posicioAlfabet/posicioAlfabet.iml" />
       <module fileurl="file://$PROJECT_DIR$/untitled/untitled.iml" filepath="$PROJECT_DIR$/untitled/untitled.iml" />
     </modules>
   </component>
