@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Matrices/18/18.iml" filepath="$PROJECT_DIR$/Matrices/18/18.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Matrices/19/19.iml" filepath="$PROJECT_DIR$/Matrices/19/19.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Matrices/22/22.iml" filepath="$PROJECT_DIR$/Matrices/22/22.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hackerrank/AlturaMinima/AlturaMinima.iml" filepath="$PROJECT_DIR$/Hackerrank/AlturaMinima/AlturaMinima.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hackerrank/Apunts/Apunts.iml" filepath="$PROJECT_DIR$/Hackerrank/Apunts/Apunts.iml" />
       <module fileurl="file://$PROJECT_DIR$/Arrays/Arrays.iml" filepath="$PROJECT_DIR$/Arrays/Arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hackerrank/AutoTest/AutoTest.iml" filepath="$PROJECT_DIR$/Hackerrank/AutoTest/AutoTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hackerrank/BlockPuzzle/BlockPuzzle.iml" filepath="$PROJECT_DIR$/Hackerrank/BlockPuzzle/BlockPuzzle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hackerrank/Bomberman/Bomberman.iml" filepath="$PROJECT_DIR$/Hackerrank/Bomberman/Bomberman.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hackerrank/CromosRepetits/CromosRepetits.iml" filepath="$PROJECT_DIR$/Hackerrank/CromosRepetits/CromosRepetits.iml" />
       <module fileurl="file://$PROJECT_DIR$/Arrays/Ex1_1/Ex1_1.iml" filepath="$PROJECT_DIR$/Arrays/Ex1_1/Ex1_1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Arrays/Ex1_10/Ex1_10.iml" filepath="$PROJECT_DIR$/Arrays/Ex1_10/Ex1_10.iml" />
       <module fileurl="file://$PROJECT_DIR$/Arrays/Ex1_11/Ex1_11.iml" filepath="$PROJECT_DIR$/Arrays/Ex1_11/Ex1_11.iml" />
@@ -23,6 +30,7 @@
       <module fileurl="file://$PROJECT_DIR$/Hackerrank/Hackerrank.iml" filepath="$PROJECT_DIR$/Hackerrank/Hackerrank.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hackerrank/HiSouTots/HiSouTots.iml" filepath="$PROJECT_DIR$/Hackerrank/HiSouTots/HiSouTots.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hackerrank/InvertirMatriz/InvertirMatriz.iml" filepath="$PROJECT_DIR$/Hackerrank/InvertirMatriz/InvertirMatriz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Matrices/Matrices.iml" filepath="$PROJECT_DIR$/Matrices/Matrices.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hackerrank/MercadilloVinilos/MercadilloVinilos.iml" filepath="$PROJECT_DIR$/Hackerrank/MercadilloVinilos/MercadilloVinilos.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hackerrank/MesclaSequencies/MesclaSequencies.iml" filepath="$PROJECT_DIR$/Hackerrank/MesclaSequencies/MesclaSequencies.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hackerrank/OrdenarSequencia/OrdenarSequencia.iml" filepath="$PROJECT_DIR$/Hackerrank/OrdenarSequencia/OrdenarSequencia.iml" />
