@@ -46,6 +46,7 @@ public class Main {
                     System.out.print(cGris + guest.charAt(i) + cReset);
                 }
             }
+
             System.out.println();
 
         }
