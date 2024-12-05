@@ -32,6 +32,13 @@
       <module fileurl="file://$PROJECT_DIR$/Arrays/Ex3/Ex3.iml" filepath="$PROJECT_DIR$/Arrays/Ex3/Ex3.iml" />
       <module fileurl="file://$PROJECT_DIR$/Arrays/Ex4/Ex4.iml" filepath="$PROJECT_DIR$/Arrays/Ex4/Ex4.iml" />
       <module fileurl="file://$PROJECT_DIR$/Arrays/Ex5/Ex5.iml" filepath="$PROJECT_DIR$/Arrays/Ex5/Ex5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Strings/Ex_8_1/Ex_8_1.iml" filepath="$PROJECT_DIR$/Strings/Ex_8_1/Ex_8_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Strings/Ex_8_2/Ex_8_2.iml" filepath="$PROJECT_DIR$/Strings/Ex_8_2/Ex_8_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Strings/Ex_8_3/Ex_8_3.iml" filepath="$PROJECT_DIR$/Strings/Ex_8_3/Ex_8_3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Strings/Ex_8_4/Ex_8_4.iml" filepath="$PROJECT_DIR$/Strings/Ex_8_4/Ex_8_4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Strings/Ex_8_5/Ex_8_5.iml" filepath="$PROJECT_DIR$/Strings/Ex_8_5/Ex_8_5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Strings/Ex_8_6/Ex_8_6.iml" filepath="$PROJECT_DIR$/Strings/Ex_8_6/Ex_8_6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Strings/Ex_8_8/Ex_8_8.iml" filepath="$PROJECT_DIR$/Strings/Ex_8_8/Ex_8_8.iml" />
       <module fileurl="file://$PROJECT_DIR$/Examen1/Examen1.iml" filepath="$PROJECT_DIR$/Examen1/Examen1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hackerrank/Hackerrank.iml" filepath="$PROJECT_DIR$/Hackerrank/Hackerrank.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hackerrank/HiSouTots/HiSouTots.iml" filepath="$PROJECT_DIR$/Hackerrank/HiSouTots/HiSouTots.iml" />
@@ -44,6 +51,7 @@
       <module fileurl="file://$PROJECT_DIR$/Hackerrank/PosicioLletra/PosicioLletra.iml" filepath="$PROJECT_DIR$/Hackerrank/PosicioLletra/PosicioLletra.iml" />
       <module fileurl="file://$PROJECT_DIR$/Programacion.iml" filepath="$PROJECT_DIR$/Programacion.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hackerrank/SequenciesIguals/SequenciesIguals.iml" filepath="$PROJECT_DIR$/Hackerrank/SequenciesIguals/SequenciesIguals.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Strings/Strings.iml" filepath="$PROJECT_DIR$/Strings/Strings.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hackerrank/SumaColumnas/SumaColumnas.iml" filepath="$PROJECT_DIR$/Hackerrank/SumaColumnas/SumaColumnas.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hackerrank/TecladoRobot/TecladoRobot.iml" filepath="$PROJECT_DIR$/Hackerrank/TecladoRobot/TecladoRobot.iml" />
       <module fileurl="file://$PROJECT_DIR$/String/Wordle/Wordle.iml" filepath="$PROJECT_DIR$/String/Wordle/Wordle.iml" />
