@@ -7,16 +7,18 @@ public class Main {
         return menu;
     }
 
-    public static String askMenu(){
+    public static String askMenuOption(){
 
         for (int i = 0; i < getMenu().length; i++){
             System.out.println(i+1 + " " + getMenu()[i]);
         }
 
+
         Scanner scanner = new Scanner(System.in);
         boolean found = false;
         String Option = " ";
 
+        System.out.println("Opcion: ");
         while(!found) {
             int selectOption = scanner.nextInt();
             for (int i = 0; i < getMenu().length; i++) {
@@ -25,11 +27,12 @@ public class Main {
                     found = true;
                 }
             }
+
         }
         return Option;
     }
 
     public static void main(String[] args) {
-        System.out.println(askMenu());
+        System.out.println(askMenuOption());
     }
 }
