@@ -3,17 +3,21 @@ import java.util.Scanner;
 public class Main {
 
     public static boolean getAge(int age){
-        boolean overage = false;
+        boolean underage = true;
         if (age >= 18){
-            overage = true;
+            underage = false;
         }
-        return overage;
+        return underage;
 
     }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int age = scanner.nextInt();
-        System.out.println(getAge(age));
+        if (!getAge(age)){
+            System.out.println("Mayor de edad");
+        } else {
+            System.out.println("Menor de edad");
+        }
 
     }
 }
