@@ -2,23 +2,15 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static int getMin(){
-        Scanner scanner = new Scanner(System.in);
-        int num1 = scanner.nextInt();
-        int num2 = scanner.nextInt();
-        int menor = 0;
-        if (num1 > num2){
-            menor = num2;
-        } else {
-            menor = num1;
-        }
-
-        return menor;
+    public static int getMin( int num1,  int num2){
+        return Math.min(num1, num2);
 
     }
 
     public static void main(String[] args) {
-
-        System.out.println(getMin());
+        Scanner scanner = new Scanner(System.in);
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+        System.out.println(getMin(num1 , num2));
     }
 }

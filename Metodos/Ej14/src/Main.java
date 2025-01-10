@@ -7,7 +7,7 @@ public class Main {
 
             data[0] = "CPULOAD: " + ((com.sun.management.OperatingSystemMXBean) ManagementFactory.getOperatingSystemMXBean()).getCpuLoad();
             data[1] = "PROCESSCPULOAD: " + ((com.sun.management.OperatingSystemMXBean) ManagementFactory.getOperatingSystemMXBean()).getProcessCpuLoad();
-            data[2] = "LOADAVERAGE: " + ((com.sun.management.OperatingSystemMXBean) ManagementFactory.getOperatingSystemMXBean()).getSystemLoadAverage();
+            data[2] = "LOADAVERAGE: " + ( ManagementFactory.getOperatingSystemMXBean()).getSystemLoadAverage();
 
         return data;
         }

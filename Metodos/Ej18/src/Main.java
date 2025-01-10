@@ -2,11 +2,8 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static String getType(){
-        Scanner scanner = new Scanner(System.in);
-        int num = scanner.nextInt();
+    public static String getType(int num){
         String type = " ";
-
         if (num > 0){
             type = "positivo";
         }
@@ -21,8 +18,9 @@ public class Main {
     }
 
     public static void main(String[] args) {
-
-        System.out.println(getType());
+        Scanner scanner = new Scanner(System.in);
+        int num = scanner.nextInt();
+        System.out.println(getType(num));
 
     }
 }
