@@ -13,4 +13,5 @@ public class Main {
         int num2 = scanner.nextInt();
         System.out.println(getMin(num1 , num2));
     }
+
 }
