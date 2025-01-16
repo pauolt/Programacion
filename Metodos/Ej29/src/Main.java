@@ -19,9 +19,7 @@ public class Main {
 
     public static void limit (int[] array, int l) {
         for (int i = 0; i < array.length; i++){
-            if (array[i] > l){
-                array[i] = l;
-            }
+            array[i] = Math.min(array[i], l);
         }
     }
 

@@ -20,11 +20,7 @@ public class Main {
     public static int[] limit(int[] array, int l){
         int[] new_array = new int[array.length];
         for (int i = 0; i < array.length; i++){
-            if (array[i] > l){
-                new_array[i] = l;
-            } else {
-                new_array[i] = array[i];
-            }
+            new_array[i] = Math.min(array[i], l);
         }
         return new_array;
     }

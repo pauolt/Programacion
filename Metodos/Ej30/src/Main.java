@@ -5,33 +5,33 @@ public class Main {
 
     public static int[] createArray(){
         int[] array = new int[ThreadLocalRandom.current().nextInt(3,15)];
-        for (int i = 0; i < array.length; i++){
+        for (int i : array){
             array[i] = ThreadLocalRandom.current().nextInt(1,50);
         }
         return array;
     }
 
     public static void printArray(int[] array){
-        for (int i = 0; i < array.length; i++){
+        for (int i : array){
             System.out.print(array[i] + " ");
         }
     }
 
     public static int[] filterAndTransform(int[] array, int l, int m){
         int cont = 0;
-        for (int i = 0; i < array.length; i++){
+        for (int i : array){
             if (array[i] <= l){
                 cont++;
             }
         }
 
         int[] new_array = new int[cont];
-        int index = 0;
+        int pos = 0;
 
-        for (int i = 0; i < array.length; i++){
+        for (int i : array){
             if (array[i] <= l){
-                new_array[index] = array[i] * m;
-                index++;
+                new_array[pos] = array[i] * m;
+                pos++;
             }
         }
         return new_array;
