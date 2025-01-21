@@ -1,19 +1,19 @@
 public class Main {
 
     static class DriverData {
-        String nombrePiloto = "Lewis Hamilton";
-        int numeroPiloto = 44;
-        String equipoPiloto = "Mercedes-AMG Petronas";
-        int podiosTotales = 191;
-        int posicionActualPilotoEnElMundial = 2;
+        String nombrePiloto;
+        int numeroPiloto;
+        String equipoPiloto;
+        int podiosTotales;
+        int posicionActualPilotoEnElMundial;
 
     }
 
     static class CircuitData {
-        String nombreCircuito = "Circuit de Monaco";
-        int vueltasTotales = 78;
-        float tiempoVueltaRapida = 1.10f;
-        int totalCarreras = 23;
+        String nombreCircuito;
+        int vueltasTotales;
+        float tiempoVueltaRapida;
+        int totalCarreras;
 
     }
 
@@ -30,63 +30,62 @@ public class Main {
     }
 
     static class Tourn {
-        String nombreTorneo = "Copa Mundial";
-        String paisOrganizador = "España";
-        int anioTorneo = 2025;
-        String estadio = "Estadio Nacional";
-        int espectadores = 50000;
-        boolean partidoConcluido = true;
+        String nombreTorneo;
+        String paisOrganizador;
+        int anioTorneo;
+        String estadio;
+        int espectadores;
+        boolean partidoConcluido;
     }
 
     static class Team {
         int golesEquipo;
         String nombreEquipo;
         String entrenadorEquipo;
-        int puntoEquipo;
+        int puntosEquipo;
     }
 
-    static class Team1Data {
-        int golesEquipo1 = 2;
-        String nombreEquipo1 = "Tigres Rojos";
-        String entrenadorEquipo1 = "Carlos Martínez";
-        int puntosEquipo1 = 3;
-    }
-
-    static class Team2Data {
-        int golesEquipo2 = 0;
-        String nombreEquipo2 = "Águilas Azules";
-        String entrenadorEquipo2 = "Ana López";
-        int puntosEquipo2 = 0;
-    }
 
     static class WorldData {
-        String nombreMundo = "Hyrule";
-        int numeroRegiones = 5;
-        boolean tieneCalabozos = true;
+        String nombreMundo;
+        int numeroRegiones;
+        boolean tieneCalabozos;
     }
 
     static class PlayerData {
-        String nombrePersonaje = "Link";
-        int salud = 100;
-        String armaPrincipal = "Espada Maestra";
+        String nombrePersonaje;
+        int salud;
+        String armaPrincipal;
     }
 
     static class EnemyData {
-        String nombreEnemigo = "Goblin";
-        int saludEnemigo = 50;
-        String armaEnemigo = "Porra";
+        String nombreEnemigo;
+        int saludEnemigo;
+        String armaEnemigo;
     }
 
     static class ObjectData {
-        String nombreObjeto = "Frasco de poción";
-        String tipoObjeto = "Curación";
-        int cantidadEfecto = 50;
+        String nombreObjeto;
+        String tipoObjeto;
+        int cantidadEfecto;
     }
 
     public static void main(String[] args) {
 
-        DriverData dd = new DriverData();
+        DriverData dd1 = new DriverData();
         CircuitData cd = new CircuitData();
+
+        dd1.nombrePiloto = "Lewis Hamilton";
+        dd1.numeroPiloto = 44;
+        dd1.equipoPiloto = "Mercedes-AMG Petronas";
+        dd1.podiosTotales = 191;
+        dd1.posicionActualPilotoEnElMundial = 2;
+
+        cd.nombreCircuito = "Circuit de Monaco";
+        cd.vueltasTotales = 78;
+        cd.tiempoVueltaRapida = 1.10f;
+        cd.totalCarreras = 23;
+
         Book book1 = new Book();
         Book book2 = new Book();
         Library library = new Library();
@@ -104,19 +103,54 @@ public class Main {
         Team team2 = new Team();
         Tourn td = new Tourn();
 
+        team1.golesEquipo = 2;
+        team1.nombreEquipo = "Tigres Rojos";
+        team1.entrenadorEquipo = "Carlos Martínez";
+        team1.puntosEquipo = 3;
+
+        team2.golesEquipo = 0;
+        team2.nombreEquipo = "Águilas Azules";
+        team2.entrenadorEquipo = "Ana López";
+        team2.puntosEquipo = 0;
+
+        td.nombreTorneo = "Copa Mundial";
+        td.paisOrganizador = "España";
+        td.anioTorneo = 2025;
+        td.estadio = "Estadio Nacional";
+        td.espectadores = 50000;
+        td.partidoConcluido = true;
+
         WorldData wd = new WorldData();
         PlayerData pd = new PlayerData();
         EnemyData ed = new EnemyData();
         ObjectData od = new ObjectData();
 
-        System.out.println("Piloto: " + dd.nombrePiloto);
-        System.out.println("Número: " + dd.numeroPiloto);
-        System.out.println("Equipo: " + dd.equipoPiloto);
+        wd.nombreMundo = "Hyrule";
+        wd.numeroRegiones = 5;
+        wd.tieneCalabozos = true;
+
+        pd.nombrePersonaje = "Link";
+        pd.salud = 100;
+        pd.armaPrincipal = "Espada Maestra";
+
+        ed.nombreEnemigo = "Goblin";
+        ed.saludEnemigo = 50;
+        ed.armaEnemigo = "Porra";
+
+        od.nombreObjeto = "Frasco de poción";
+        od.tipoObjeto = "Curación";
+        od.cantidadEfecto = 50;
+
+
+
+        System.out.println("Piloto: " + dd1.nombrePiloto);
+        System.out.println("Número: " + dd1.numeroPiloto);
+        System.out.println("Equipo: " + dd1.equipoPiloto);
         System.out.println("Circuito: " + cd.nombreCircuito);
         System.out.println("Vueltas totales: " + cd.vueltasTotales);
         System.out.println("Tiempo vuelta rápida: " + cd.tiempoVueltaRapida + " min");
         System.out.println("Carreras en la temporada: " + cd.totalCarreras);
-        System.out.println("Posición actual del piloto: " + dd.posicionActualPilotoEnElMundial);
+        System.out.println("Posición actual del piloto: " + dd1.posicionActualPilotoEnElMundial);
 
         System.out.println("Biblioteca: " + library.nombreBiblioteca);
         System.out.println("Dirección: " + library.direccionBiblioteca);
@@ -125,9 +159,9 @@ public class Main {
         System.out.println("- " + book2.titulo + " (Autor: " + book2.autor + ", Año: " + book2.anioPublicacionLibro + ")");
 
         System.out.println("Torneo: " + td.nombreTorneo + " (" + td.anioTorneo + ")");
-        System.out.println("Partido: " + t1d.nombreEquipo1 + " vs. " + t2d.nombreEquipo2);
-        System.out.println("Goles " + t1d.nombreEquipo1 + ": " + t1d.golesEquipo1);
-        System.out.println("Goles " + t2d.nombreEquipo2 + ": " + t2d.golesEquipo2);
+        System.out.println("Partido: " + team1.nombreEquipo + " vs. " + team2.nombreEquipo);
+        System.out.println("Goles " + team1.nombreEquipo + ": " + team2.golesEquipo);
+        System.out.println("Goles " + team1.nombreEquipo + ": " + team2.golesEquipo);
         System.out.println("Estadio: " + td.estadio + " (Espectadores: " + td.espectadores + ")");
 
         System.out.println("Mundo: " + wd.nombreMundo + " (Regiones: " + wd.numeroRegiones + ")");
