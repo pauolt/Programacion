@@ -1,30 +1,29 @@
+class power_card {
+    String name;
+    String type;
+    int points;
+
+    power_card(String name, String type, int points){
+        this.name = name;
+        this.type = type;
+        this.points = points;
+
+    }
+}
+class player_card {
+    String name;
+    int health;
+    String special;
+
+    player_card(String name, int health, String special){
+        this.name = name;
+        this.health = health;
+        this.special = special;
+
+    }
+}
 public class Main {
 
-    static class power_card {
-        String name;
-        String type;
-        int points;
-
-        power_card(String name, String type, int points){
-            this.name = name;
-            this.type = type;
-            this.points = points;
-
-        }
-    }
-
-    static class player_card {
-        String name;
-        int health;
-        String special;
-
-        player_card(String name, int health, String special){
-            this.name = name;
-            this.health = health;
-            this.special = special;
-
-        }
-    }
 
     public static void main(String[] args) {
 
