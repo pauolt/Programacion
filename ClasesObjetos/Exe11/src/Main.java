@@ -27,7 +27,7 @@ class Libro {
     }
 
     String getInfo() {
-        return "Titulo: " + titulo + "| Autor: " + autor + "| Disponible: " + disponible;
+        return "Titulo: " + titulo + " | Autor: " + autor + " | Disponible: " + disponible;
     }
 
 }
@@ -61,12 +61,19 @@ public class Main {
                     String titulo = scanner.nextLine();
                     System.out.print("Autor: ");
                     String autor = scanner.nextLine();
+                    boolean SeHaPodidoAnyadir = false;
 
                     for (int i = 0; i < libros.length; i++){
                         if (libros[i] == null){
                             libros[i] = new Libro(titulo, autor);
+                            SeHaPodidoAnyadir = true;
                             break;
                         }
+                    }
+                    if (SeHaPodidoAnyadir){
+                        System.out.println("Libro añadido.");
+                    } else {
+                        System.out.println("Biblioteca llena.");
                     }
 
                 }
@@ -74,33 +81,40 @@ public class Main {
 
                 case "2" -> {
                     System.out.println("Lista de libros");
-
                     for (int i = 0; i < libros.length; i++){
                         if (libros[i] != null) {
                             System.out.println(libros[i].getInfo());
                         }
                     }
+                    System.out.println();
                 }
 
 
                 case "3" -> {
                     System.out.print("Número del libro a eliminar: ");
                     int n = scanner.nextInt();
-                    for (int i = 0; i < libros.length; i++){
-                        if (i == n-1){
-                            libros[i] = null;
-                        }
+                    scanner.nextLine();
+                    if (n < libros.length-1){
+                                libros[n] = null;
+                                System.out.println("Libro Eliminado");
+
+                    } else {
+                        System.out.println("Numero de libro incorrecto");
                     }
+
                 }
 
 
                 case "4" -> {
                     System.out.print("Número del libro a prestar: ");
                     int n = scanner.nextInt();
-                    for (int i = 0; i < libros.length; i++){
-                        if (i == n && libros[i] != null){
-                            libros[i].prestar();
-                        }
+                    scanner.nextLine();
+                    if (libros[n] != null && libros[n].disponible ) {
+                                libros[n].prestar();
+                                System.out.println("Libro prestado correctamente");
+
+                    } else {
+                        System.out.println("Libro no disponible.");
                     }
                 }
 
@@ -108,11 +122,14 @@ public class Main {
                 case "5" -> {
                     System.out.print("Número del libro a devolver: ");
                     int n = scanner.nextInt();
-                    for (int i = 0; i < libros.length; i++){
-                        if (i == n && libros[i] != null){
-                            libros[i].devolver();
+                    scanner.nextLine();
+                        if (libros[n] != null && !libros[n].disponible){
+                            libros[n].devolver();
+                            System.out.println("Libro devuelto correctamente");
+                        } else {
+                            System.out.println("No se puede devolver el libro.");
                         }
-                    }
+
                 }
 
                 case "6" -> {
