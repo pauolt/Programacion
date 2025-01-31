@@ -26,12 +26,16 @@ class Question {
         this.corr = corr;
 
     }
+
+    String getInfo (){
+        return category + "\n" + question + "\n" + A + "\n" + B + "\n" + C + "\n" + D;
+    }
 }
 
 public class Main {
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
-        Scanner fichero = new Scanner(Path.of("preguntas.txt"));
+        Scanner fichero = new Scanner(Path.of("/home/pauolt2/IdeaProjects/Programacion/preguntas.txt"));
 
         System.out.println("Cuantos sois?");
 
@@ -56,6 +60,11 @@ public class Main {
             String category = fichero.nextLine();
 
             questions[i] = new Question(category,question,a,b,c,d,correct);
+        }
+
+        for (int i = 0; i < questions.length; i++){
+            System.out.println(questions[i].getInfo());
+
         }
 
     }
