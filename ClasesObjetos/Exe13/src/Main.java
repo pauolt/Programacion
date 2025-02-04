@@ -49,6 +49,7 @@ public class Main {
         }
 
         Question[] questions = new Question[fichero.nextInt()];
+        fichero.nextLine();
 
         for (int i = 0; i < questions.length; i++) {
             String question = fichero.nextLine();
