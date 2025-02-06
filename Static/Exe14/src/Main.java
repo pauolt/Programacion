@@ -44,7 +44,7 @@ class Producto {
 
 
    float getPrecioConDescuento (){
-       return precio * descuento / 100;
+       return precio - (precio * descuento / 100);
    }
 
    float getPrecioMasIva (){
@@ -66,11 +66,14 @@ public class Main {
         Producto leche = new Producto("SI", 2, 20);
         Producto pan = new Producto("NO", 1.2f, 15);
 
-        Producto.setIva(20);
+        Producto.setIva(10);
         System.out.println(leche.getPrecioConDescuento());
         System.out.println(leche.getPrecioMasIva());
         System.out.println(leche.getPrecioConDescuentoMasIva());
 
+        System.out.println(pan.getPrecioConDescuento());
+        System.out.println(pan.getPrecioMasIva());
+        System.out.println(pan.getPrecioConDescuentoMasIva());
 
 
     }
