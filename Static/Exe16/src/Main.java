@@ -23,7 +23,7 @@ class Alumno {
         return new Random().nextInt(min, max);
     }
 
-    String getInfo() {
+    public String toString() {
         return nombre + " : " + apellido1 + " : " + apellido2 + " : " + email;
     }
 }
@@ -32,14 +32,14 @@ public class Main {
     public static void main(String[] args) {
         Alumno alumno1 = new Alumno("Gerard", "Falco", "Perez");
 
-        System.out.println(alumno1.getInfo());
+        System.out.println(alumno1);
 
         Alumno.dominio = "@gmail.com";
         Alumno alumno2 = new Alumno("Pepe", "Falco", "Perez");
 
 
-        System.out.println(alumno1.getInfo());
-        System.out.println(alumno2.getInfo());
+        System.out.println(alumno1);
+        System.out.println(alumno2);
 
     }
 }

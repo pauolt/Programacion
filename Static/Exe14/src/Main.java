@@ -52,7 +52,7 @@ class Producto {
    }
 
    float getPrecioConDescuentoMasIva () {
-       return getPrecioConDescuento() + ( getPrecioMasIva() - precio);
+       return getPrecioConDescuento() * (1 + iva / 100);
    }
 
    String getInfo(){

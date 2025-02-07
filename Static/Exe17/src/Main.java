@@ -49,12 +49,16 @@ public class Main {
     public static void main(String[] args) {
         CuentaBancaria cuenta1 = new CuentaBancaria("Paco Sanz", 30);
         CuentaBancaria cuenta2 = new CuentaBancaria("Kiko Rivera", 64000);
+
         cuenta1.depositar(20);
         cuenta2.depositar(10000);
+
         System.out.println("Cuenta: " + "\n" + cuenta1.mostrarInformacion() + "\n");
         System.out.println("Cuenta: " + "\n" + cuenta2.mostrarInformacion() + "\n");
+
         cuenta1.retirar(5);
         cuenta2.retirar(4000);
+
         System.out.println("Cuenta: " + "\n" + cuenta1.mostrarInformacion() + "\n");
         System.out.println("Cuenta: " + "\n" + cuenta2.mostrarInformacion() + "\n");
         System.out.println("Numero total cuentas: " + CuentaBancaria.obtenerNumeroTotalCuentas());
