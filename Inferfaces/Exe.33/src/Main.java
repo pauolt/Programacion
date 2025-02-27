@@ -1,77 +1,55 @@
-abstract class Notificacion{
-    String destinatario, contenido;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.time.LocalDate;
+import java.util.Scanner;
 
-    Notificacion(String destinatario, String contenido){
-        this.destinatario = destinatario;
-        this.contenido = contenido;
+class SafeScanner {
+    interface BadWordAction {
+        void action(String badWord) throws Exception;
     }
 
-    abstract String enviar();
-}
 
-class SMS extends Notificacion{
+    Scanner scanner = new Scanner(System.in);
+    String[] badWords = {"caca", "culo", "pedo", "pis"};
+    BadWordAction badWordAction;
 
-    SMS(String destinatario, String contenido){
-        super(destinatario, contenido);
+
+    void setBadWordAction(BadWordAction badWordAction) {
+        this.badWordAction = badWordAction;
     }
 
-    @Override
-    String enviar() {
-        return "Enviando SMS a: " + destinatario + " = " + contenido;
-    }
-}
 
-class Email extends Notificacion{
+    String nextLine() throws Exception {
+        String line = scanner.nextLine();
 
-    Email(String destinatario, String contenido){
-        super(destinatario, contenido);
-    }
 
-    @Override
-    String enviar() {
-        return "Enviando email a " + destinatario + " = " + contenido;
-    }
-}
-
-class Push extends Notificacion{
-
-    Push(String destinatario, String contenido){
-        super(destinatario, contenido);
-    }
-
-    @Override
-    String enviar() {
-        return "Enviando notificacion push a " + destinatario + " = " + contenido;
-    }
-}
-
-class NotificacionManager {
-    Notificacion[] array_notis = new Notificacion[100];
-
-    void encolarNotificacion(Notificacion notificacion){
-        for (int i = 0; i < array_notis.length; i++){
-            if (array_notis[i] == null){
-                array_notis[i] = notificacion;
-                break;
+        for (int i = 0; i < badWords.length; i++) {
+            if (line.contains(badWords[i])) {
+                if ( badWordAction != null)
+                    badWordAction.action(badWords[i]);
+                return "censored";
             }
         }
-
+        return line;
     }
-
-    void enviarTodas(){
-        for (int i = 0; i < array_notis.length; i++){
-            if (array_notis[i] != null){
-                array_notis[i].enviar();
-                array_notis[i] = null;
-            }
-        }
-    }
-
 }
 
+class ReportarPalabrota implements SafeScanner.BadWordAction{
+    @Override
+    public void action(String badWord) throws Exception {
+        Files.writeString(Path.of("registro.log"), badWord + ":" + LocalDate.now());
+    }
+}
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+        SafeScanner safeScanner = new SafeScanner();
+
+        safeScanner.setBadWordAction(new ReportarPalabrota());
+        while(true) {
+            String linea = safeScanner.nextLine();
+            System.out.println(linea);
+        }
 
     }
 }
