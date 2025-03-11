@@ -13,10 +13,7 @@ class Alumno {
     }
 
     static String generarEmail (String nombre, String apellido1, String apellido2){
-        String email =
-                (nombre.substring(0,3) + apellido1.substring(0,3) + apellido2.substring(0,3) + generarNumeroAleatorio(100, 1000) + dominio).toLowerCase();
-
-        return email;
+        return (nombre.substring(0,3) + apellido1.substring(0,3) + apellido2.substring(0,3) + generarNumeroAleatorio(100, 1000) + dominio).toLowerCase();
     }
 
     static int generarNumeroAleatorio(int min, int max){
