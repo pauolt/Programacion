@@ -16,8 +16,6 @@ class ListaAlumnos {
 
     void add(int pos, Alumno alumno){
         grow();
-        alumnos[size] = alumno;
-        size++;
     }
 
     void add(Alumno alumno){
