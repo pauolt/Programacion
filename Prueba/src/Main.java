@@ -16,6 +16,10 @@ class ListaAlumnos {
 
     void add(int pos, Alumno alumno){
         grow();
+
+        // con la i voy hacia atras desde size hasta pos (sin incluir pos)
+
+        // copia en i el elemento i-1
     }
 
     void add(Alumno alumno){
