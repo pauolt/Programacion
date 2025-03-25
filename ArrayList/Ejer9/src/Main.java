@@ -98,7 +98,6 @@ class MovieOps {
     }
 
     static List<Movie> topRated (List<Movie> movies, int cantidad){
-        List<Movie> peliculasTopRated = new ArrayList<>();
         List<Movie> moviesSorted = new ArrayList<>(movies);
 
         moviesSorted.sort((a, b) -> {
@@ -106,39 +105,29 @@ class MovieOps {
                 return -1; // a tiene mayor rating, va antes
             } else if (a.rating() < b.rating()) {
                 return 1;  // b tiene mayor rating, va antes
-            } else {
-                return 0;  // Son iguales
             }
+                return 0;  // Son iguales
         });
 
-        for (int i=0; i < cantidad; i++){
-            peliculasTopRated.add(moviesSorted.get(i));
-        }
-        return peliculasTopRated;
+        return new ArrayList<>(moviesSorted.subList(0,cantidad));
     }
 
     static boolean allLonger (List<Movie> movies, double duration){
-        boolean areLonger = true;
-
         for (Movie movie : movies){
             if (movie.duration() < duration){
-                areLonger = false;
+                return false;
             }
         }
-
-        return areLonger;
+        return true;
     }
 
     static boolean anyRatedLower (List<Movie> movies, double rating) {
-        boolean areRatedLower = true;
-
         for (Movie movie : movies){
             if (movie.rating() > rating){
-                areRatedLower = false;
+            return false;
             }
         }
-
-        return areRatedLower;
+        return true;
     }
 
     static double averageRating (List<Movie> movies){
@@ -235,6 +224,7 @@ class MovieRepo {
 
 }
 
+
 public class Main {
     public static void main(String[] args) {
 
@@ -242,23 +232,24 @@ public class Main {
 
 
         List<String> titulos = MovieOps.titlesUppercase(movieRepo.pelis);
+        List<Movie> copia_pelis = new ArrayList<>(movieRepo.pelis);
 
         for (String titulo : titulos){
             System.out.println(titulo);
         }
 
-        System.out.println("Pelicula más larga: " + MovieOps.longest(movieRepo.pelis));
-        System.out.println("Pelicula más corta : " + MovieOps.shortest(movieRepo.pelis));
-        System.out.println("Peliculas posteriores al año 2000 : " + MovieOps.afterYear(movieRepo.pelis, 2000));
-        System.out.println("Peliculas con un rating superior a 8.8 : " + MovieOps.aboveRating(movieRepo.pelis, 8.8));
-        System.out.println("Peliculas con una duración superior a 140 min : " + MovieOps.longer(movieRepo.pelis, 140));
-        System.out.println("Peliculas lanzadas en el año 1999 : " + MovieOps.yearReleased(movieRepo.pelis, 1999));
-        System.out.println("Peliculas ordenadas por titulo : " + MovieOps.sortByTitle(movieRepo.pelis));
-        System.out.println("Top 5 peliculas mejor valoradas: " + MovieOps.topRated(movieRepo.pelis, 5));
-        System.out.println("¿Duran las todas las peliculas más de 120 min?: " + MovieOps.allLonger(movieRepo.pelis, 120));
-        System.out.println("¿Tienen todas las peliculas un rating inferior a 8.8?: " + MovieOps.anyRatedLower(movieRepo.pelis, 8.8));
-        System.out.println("El rating medio de las peliculas es de: " + MovieOps.averageRating(movieRepo.pelis));
-        System.out.println("La duracion acumulada de todas las peliculas es de: " + MovieOps.totalDuration(movieRepo.pelis) + " mins o " + MovieOps.totalDuration(movieRepo.pelis)/60 + " horas");
+        System.out.println("Pelicula más larga: " + MovieOps.longest(copia_pelis));
+        System.out.println("Pelicula más corta : " + MovieOps.shortest(copia_pelis));
+        System.out.println("Peliculas posteriores al año 2000 : " + MovieOps.afterYear(copia_pelis, 2000));
+        System.out.println("Peliculas con un rating superior a 8.8 : " + MovieOps.aboveRating(copia_pelis, 8.8));
+        System.out.println("Peliculas con una duración superior a 140 min : " + MovieOps.longer(copia_pelis, 140));
+        System.out.println("Peliculas lanzadas en el año 1999 : " + MovieOps.yearReleased(copia_pelis, 1999));
+        System.out.println("Peliculas ordenadas por titulo : " + MovieOps.sortByTitle(copia_pelis));
+        System.out.println("Top 5 peliculas mejor valoradas: " + MovieOps.topRated(copia_pelis, 5));
+        System.out.println("¿Duran las todas las peliculas más de 120 min?: " + MovieOps.allLonger(copia_pelis, 120));
+        System.out.println("¿Tienen todas las peliculas un rating inferior a 8.8?: " + MovieOps.anyRatedLower(copia_pelis, 8.8));
+        System.out.println("El rating medio de las peliculas es de: " + MovieOps.averageRating(copia_pelis));
+        System.out.println("La duracion acumulada de todas las peliculas es de: " + MovieOps.totalDuration(copia_pelis) + " mins o " + MovieOps.totalDuration(copia_pelis)/60 + " horas");
         System.out.println("La duracion acumulada de las peliculas lanzadas despues del 2000 es de: " + movieRepo.totalDurationOfMoviesAfterYear2000());
         System.out.println("¿La pelicula más larga esta en el top 5 mejor valoradas?: " + movieRepo.longestIsInTopFive());
         System.out.println("Peliculas con un rating superior al de la media: " + movieRepo.ratingAboveAverage());
