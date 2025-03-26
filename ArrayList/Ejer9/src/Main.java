@@ -259,11 +259,5 @@ public class Main {
         System.out.println("¿La pelicula más larga es la mejor valorada?: " + movieRepo.longerIsBetter());
         System.out.println("Titulos en Mayus de las 3 peliculas mejor valoradas lanzadas después del 1995: " + movieRepo.topThreeAfter1995());
 
-
-
-
-
-
-
     }
 }
