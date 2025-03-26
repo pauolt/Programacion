@@ -9,11 +9,12 @@ public class Main {
 
         while (true) {
             System.out.println(
-                    "1) Agregar palabra\n" +
-                            "2) Verificar palabra\n" +
-                            "3) Eliminar palabra\n" +
-                            "4) Mostrar palabras\n" +
-                            "5) Salir"
+                    """
+                            1) Agregar palabra
+                            2) Verificar palabra
+                            3) Eliminar palabra
+                            4) Mostrar palabras
+                            5) Salir"""
             );
             System.out.println("¿Qué quieres hacer?");
             int ans = scanner.nextInt();
