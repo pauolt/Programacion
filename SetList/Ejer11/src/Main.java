@@ -51,8 +51,10 @@ public class Main {
                     System.out.println("No hay palabras en la lista.");
 
                 } else {
-                    System.out.println("Palabras en la lista: " + String.join(", ", words));
-
+                    for (String w : words){
+                        System.out.print(w + ", ");
+                    }
+                    System.out.println();
                 }
             } else if (ans == 5) {
                 System.out.println("Saliendo...");
