@@ -41,7 +41,7 @@ public class Main {
                     System.out.println("Numero nuevo: ");
                     num = scanner.nextLine();
                     agenda.compute(name, (k,v) -> {
-                        if (num == null)
+                        //if (num == null)
                     })
                     break;
 
