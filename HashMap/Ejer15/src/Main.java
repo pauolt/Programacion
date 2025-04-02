@@ -1,3 +1,5 @@
+import com.sun.source.tree.IfTree;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -38,11 +40,21 @@ public class Main {
                 case 2:
                     System.out.println("Nombre del contacto a modificar: ");
                     name = scanner.nextLine();
-                    System.out.println("Numero nuevo: ");
+                    System.out.println("Número nuevo: ");
                     num = scanner.nextLine();
-                    agenda.compute(name, (k,v) -> {
-                        //if (num == null)
-                    })
+
+                    agenda.compute(name, (k, v) -> {
+                        if (v == null) {
+                            System.out.println("Contacto no encontrado. ¿Desea añadirlo? (Y/N)");
+                            String respuesta = scanner.next().toLowerCase();
+                            if (respuesta.equals("y")) {
+                                return num;
+                            } else {
+                                return null;
+                            }
+                        }
+                        return num;
+                    });
                     break;
 
                 case 3:
