@@ -40,19 +40,39 @@ class GroupManager {
 }
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         GroupManager grupos = new GroupManager();
-        System.out.println(grupos.addUserToGroup("Paco", "Patxingars")); //true
-        System.out.println(grupos.addUserToGroup("Fran", "Patxingars")); //true
-        System.out.println(grupos.addUserToGroup("Juan", "Patxingars")); //true
-        System.out.println(grupos.removeUserFromGroup("Iñaki", "Patxingars")); //false
-        System.out.println(grupos.removeUserFromGroup("Paco", "Pachingars")); //false
-        System.out.println(grupos.removeUserFromGroup("Paco", "Patxingars")); //true
-        System.out.println(grupos.addUserToGroup("Kalista", "Lol")); //true
-        System.out.println(grupos.deleteGroup("Lol")); //true
-        System.out.print(grupos.getGroups() + "  ");
-        System.out.println();
-        System.out.print(grupos.getUsers("Patxingars") + " ");
 
-
+        while (true) {
+            String com = scanner.next();
+            String user;
+            String group;
+            switch (com) {
+                case "add":
+                    user = scanner.next();
+                    group = scanner.nextLine().trim();
+                    grupos.addUserToGroup(user, group);
+                    break;
+                case "remove":
+                    user = scanner.next();
+                    group = scanner.nextLine().trim();
+                    grupos.removeUserFromGroup(user, group);
+                    break;
+                case "delete":
+                    group = scanner.next();
+                    grupos.deleteGroup(group);
+                    break;
+                case "list":
+                    group = scanner.nextLine().trim();
+                    if (group.isEmpty()) {
+                        System.out.println(grupos.getGroups());
+                    } else {
+                        System.out.println(grupos.getUsers(group));
+                    }
+                    break;
+                case "exit":
+                    return;
+            }
+        }
     }
 }
