@@ -14,20 +14,20 @@ class GestionDeReservas {
 
         reservas.putIfAbsent(habitacion, new ArrayList<>());
         for (Reserva res : reservas.get(habitacion) ) {
-            if (res.hora_inicio() == inicio || inicio > res.hora_inicio() || fin > res.hora_inicio() || res.hora_final() == inicio) return false;
+            if (!(res.hora_inicio() >= fin || res.hora_final() <= inicio)) return false;
         }
-
         reservas.get(habitacion).add(new Reserva(inicio, fin, cliente));
         return true;
+
     }
 
     void liberar (int habitacion, int inicio){
-        if (!reservas.containsKey(habitacion)) return;
-
-        List<Reserva> listaReservas = reservas.get(habitacion);
-        listaReservas.removeIf(reserva -> reserva.hora_inicio() == inicio);
-
-        if (listaReservas.isEmpty()) reservas.remove(habitacion);
+        reservas.get(habitacion).removeIf(reserva ->  {
+            if (reserva.hora_inicio() == inicio){
+                return true;
+            }
+            return false;
+        });
     }
 }
 
