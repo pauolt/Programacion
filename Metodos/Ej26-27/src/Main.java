@@ -17,9 +17,7 @@ public class Main {
         for (int i = 0; i < new_array.length; i++){
             new_array[i] = 0;
         }
-        for (int i = 0; i < array.length; i++){
-            new_array[i] = array[i];
-        }
+        System.arraycopy(array, 0, new_array, 0, array.length);
 
         return new_array;
     }

@@ -18,8 +18,8 @@ public class Main {
         System.out.println(retornado);
 
         System.out.println();
-        for (Alumno alumno: listaAlumnos){
-            System.out.println(alumno.nombre());
+        for (Alumno(String nombre) : listaAlumnos) {
+            System.out.println(nombre);
         }
 
 

@@ -7,7 +7,7 @@ public class Main {
         String t1 = scanner.nextLine();
         String t2 = scanner.nextLine();
 
-        System.out.println(t1.toLowerCase().equals(t2.toLowerCase()));
+        System.out.println(t1.equalsIgnoreCase(t2));
 
     }
 

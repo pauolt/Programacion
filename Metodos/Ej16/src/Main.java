@@ -3,10 +3,7 @@ import java.util.Scanner;
 public class Main {
 
     public static boolean getAge(int age){
-        boolean underage = true;
-        if (age >= 18){
-            underage = false;
-        }
+        boolean underage = age < 18;
         return underage;
 
     }

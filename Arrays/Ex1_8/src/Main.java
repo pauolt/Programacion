@@ -8,7 +8,7 @@ public class Main {
         float r = 0;
         int may = 0;
         for (int i = 0; i < numeros.length; i++){
-            numeros[i] = random.nextFloat(0.0f, 1.0f);;
+            numeros[i] = random.nextFloat(0.0f, 1.0f);
         }
         r = scanner.nextFloat();
         for (int i = 0; i < numeros.length; i++){

@@ -23,10 +23,7 @@ class GestionDeReservas {
 
     void liberar (int habitacion, int inicio){
         reservas.get(habitacion).removeIf(reserva ->  {
-            if (reserva.hora_inicio() == inicio){
-                return true;
-            }
-            return false;
+            return reserva.hora_inicio() == inicio;
         });
     }
 }

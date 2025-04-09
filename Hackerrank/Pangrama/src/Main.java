@@ -10,8 +10,9 @@ public class Main {
         for (int i = 0; i < alfa.length; i++){
             boolean tieneLetra = false;
             for (int j = 0; j < text.length; j++){
-                if(alfa[i] == text[j]){
+                if (alfa[i] == text[j]) {
                     tieneLetra = true;
+                    break;
                 }
             }
             if (!tieneLetra) {

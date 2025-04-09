@@ -26,9 +26,7 @@ public class Main {
 
 
             for (int i = 0; i < nuevaMatriz.length; i++){
-                for (int j = 0; j < nuevaMatriz[i].length; j++){
-                    nuevaMatriz[i][j] = matriz[i][j];
-                }
+                System.arraycopy(matriz[i], 0, nuevaMatriz[i], 0, nuevaMatriz[i].length);
             }
 
 

@@ -23,8 +23,9 @@ public class Main {
 
         for (int i = 0; i < jugada.length; i++){
             for (int j = 0; j < jugada[i].length; j++){
-                if (tablero[i][j] == jugada[i][j] && tablero[i][j] == 1 && jugada[i][j] == 1){
+                if (tablero[i][j] == jugada[i][j] && tablero[i][j] == 1 && jugada[i][j] == 1) {
                     correcta = false;
+                    break;
                 }
             }
         }

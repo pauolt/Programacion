@@ -42,8 +42,9 @@ public class Main {
             contiene  = true;
             if (secuencia[i] == segmento[0]){
                 for (int j = 0; j < segmento.length; j++){
-                    if (secuencia[i] != segmento[j]){
+                    if (secuencia[i] != segmento[j]) {
                         contiene = false;
+                        break;
                     }
                 }
             }
